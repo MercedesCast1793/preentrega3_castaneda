@@ -1,0 +1,24 @@
+.navbar-brand{
+    width: 25%;
+}
+.nav-item {
+    color: black;
+    float: right;
+    line-height: 75px;
+    a {
+        text-shadow: 1px 1px #ccc, 2px 2px #dfdf58, 3px 3px #ccc, 4px 4px #c0a889;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 15px;
+        line-height: normal;
+        transition: all 500ms ease;
+        border-bottom: 4px solid transparent;
+        }
+    a:hover {
+        color: #c0a889;
+        border-bottom: 4px solid #dfdf58;
+        }
+}
+

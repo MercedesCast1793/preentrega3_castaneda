@@ -1,0 +1,15 @@
+{
+  "name": "preentrega3_castaneda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-sass": "sass --watch scss/main.scss css/styles.css"
+  },
+  "author": "Mercedes Castañeda",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}

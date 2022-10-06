@@ -1,0 +1,95 @@
+.galeria_musica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.galeria_musica_card {
+    width: 80%;
+    height: 30vh;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria_musica_card_destacada {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background-image: url(/assets/img/majodan.png);
+    background-size: cover;
+}
+
+.galeria_musica_card_secundaria1 {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background-image: url(/assets/img/alfarero2.jpg);
+    background-size: cover;
+}
+
+.galeria_musica_card_secundaria2 {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background-image: url(/assets/img/evancraft.jpg);
+    background-size: cover;
+}
+
+.galeria_musica_card_secundaria3 {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background-image: url(/assets/img/conexioncielo.jpg);
+    background-size: cover;
+}
+
+.galeria_musica_card_secundaria4 {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    background-image: url(/assets/img/primerafe.jpg);
+    background-size: cover;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .galeria_musica {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: 50vh repeat(2, 45vh);
+    }
+
+    .galeria_musica_card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .galeria_musica_card_destacada {
+        grid-column: span 2;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .galeria_musica {
+        display: grid;
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: repeat(2, 35vh);
+    }
+
+    .galeria_musica_card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .galeria_musica_card_destacada {
+        grid-column: span 2;
+        grid-row: span 2;
+        font-size: 4rem;
+    }
+
+    .galeria_musica_card h3 {
+        display: none;
+    }
+
+    .galeria_musica_card:hover h3 {
+        display: block;
+    }
+}

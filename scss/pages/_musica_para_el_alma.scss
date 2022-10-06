@@ -1,0 +1,374 @@
+.cuerpo_musica{
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container_musica{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.container_musica aside{
+    width: 20%;
+    height: 100vh;
+    background-color:#FF6F91;
+    padding: var(--padding);
+}
+.container_musica aside .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container_musica aside .menu a{
+    text-decoration: none;
+    padding: 10px 1rem;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.container_musicaaside .menu a span{
+    margin-right: 8px;
+}
+.container_musica aside .menu a.active{
+    background-color:#FF9671;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.container_musica aside .menu a:hover{
+    color:#FF9671;
+}
+.container_musica section{
+    width: 80%;
+    height: 100vh;
+    color: black;
+    background-color: var(--fondo);
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+}
+.container_musica section::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+.container_musica section::-webkit-scrollbar:vertical{
+    width: 7px;
+}
+.container_musica section::-webkit-scrollbar-thumb{
+    background-color: #797979;
+}
+.container_musica section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: var(--padding);
+    width: 80%;
+    background-color: white;
+    z-index: 2;
+}
+.container_musica section header .botones_prev_next,.container_musica section header .suscribcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_musica section header .botones_prev_next span{
+    cursor: pointer;
+}
+.container_musica section header .botones_prev_next span.btn_prev{
+    margin-right: 1em;
+}
+.container_musica section header .suscribcion .mejora_cuenta{
+    margin-right: 1.5em;
+}
+.container_musica section header .suscribcion .mejora_cuenta button{
+    background-color:transparent;
+    border: 2px solid #FF6F91;
+    width: 150px;
+    padding: 0.8em 0;
+    color: #FF6F91;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 2px 2px 10px #666;
+}
+.container_musica section header .suscribcion .mejora_cuenta button:hover{
+    transform: scale(1.1);
+}
+.container_musica section header .suscribcion .perfil{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    width: auto;
+    padding: .4em 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+.container_musica section header .suscribcion .perfil .circulo{
+    background-color: black;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circulo, .nombre{
+    margin-right: 5px;
+}
+.container_musica section .contenedor_degradado, .container section .contenedor_contenido{
+    padding: var(--padding);
+}
+.container_musica section .contenedor_degradado{
+    background: linear-gradient(#FEFEDF,#F3C5FF);
+    width: 100%;
+    margin-top: 100px;
+}
+.container_musica section .contenedor_degradado .banner{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/img/audifonos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #666;
+}
+.container_musica section .contenedor_degradado .banner .cancion{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    margin: 1em;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+.container_musica section .contenedor_degradado .banner .cancion figure{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: var(--efecto);
+}
+.container_musica section .contenedor_degradado .banner .cancion figure img{
+    width: 100%;
+    height: 100%;
+}
+.container_musica section .contenedor_degradado .banner .cancion figure:hover:before{
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0,0,0.286);
+    width: 100%;
+    height: 100%;
+}
+.container_musica section .contenedor_degradado .banner .cancion figure:hover:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-image: url(../assets/img/play.svg);
+    background-position: center;
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+}
+.container_musica section .contenedor_degradado .banner .cancion figure:hover{
+    width: 100%;
+    transform: scale(1.2);
+}
+.container_musica .contenedor_contenido .titulos{
+    text-align: start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container_musica section .contenedor_contenido .generos,
+.container_musica section .contenedor_contenido .podcast{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.container_musica section .contenedor_contenido .generos .cards{
+    transition: var(--efecto);
+    flex-basis: calc((100% / 3) - 20px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    cursor: pointer;
+    border-radius: var(--radius);
+    margin: 10px;
+    box-shadow: 2px 2px 10px #666;
+}
+.container_musica section .contenedor_contenido .generos .cards .card_imagen{
+    width: 80px;
+    height: 80px;
+}
+.container_musica section .contenedor_contenido .generos .cards .card_imagen img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+.container_musica section .contenedor_contenido .generos .cards .card_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: calc(100% - 80px);
+}
+.container_musica section .contenedor_contenido .generos .cards .card_text img{
+    opacity: 0;
+}
+.container_musica section .contenedor_contenido .generos .cards:hover{
+    background: linear-gradient(#666666, #474747);
+}
+.container_musica section .contenedor_contenido .generos .cards:hover img{
+    opacity: 1;
+    transition: var(--efecto);
+}
+.container_musica section .contenedor_contenido .podcast .card_podcast{
+    transition: var(--efecto);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: calc((100% / 4 ) - 20px);
+    margin: 10px;
+    background-color: white;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: var(--radius);
+    box-shadow: 2px 2px 10px #666;
+}
+.container_musica section .contenedor_contenido .podcast .card_podcast:hover{
+    background: linear-gradient(#666666, #474747);
+}
+.container_musica section .contenedor_contenido .podcast .card_podcast img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 10px #666;
+}
+.container_musica section .contenedor_contenido .podcast .card_podcast:hover img{
+    box-shadow: 5px 4px 10px hsl(0, 0%, 11%);
+}
+.container_musica section .contenedor_contenido .podcast .card_podcast h4{
+    margin-top: 1em;
+}
+.container_musica footer{
+    background: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: var(--padding);
+    border-top: 1px solid #282828;
+    color: #ffffff;
+}
+.container_musica footer .controles{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-bottom: .5em;
+}
+.container_musica footer .controles img{
+    margin: 0 .5em;
+    border-radius: var(--radius);
+    box-shadow: 2px 2px 10px #666;
+}
+.container_musica footer .progreso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_musica footer .progreso .barra_progreso{
+    width: 40%;
+    height: 5px;
+    background-color: #282828;
+    border-radius: var(--radius);
+    margin: 0 1em;
+    box-shadow: 2px 2px 10px #666;
+}
+
+#container_musica{
+    background:linear-gradient(to bottom, #FF6F91, #FFC75F);
+    width: 400px;
+    height: 735px;
+    margin: auto;
+}
+
+.cabeza{
+    margin: 0;
+}
+
+.cabeza li{
+    list-style: none;
+    float:left;
+    margin-top:20px;
+}
+
+.cabeza li a{
+    text-decoration:none;
+    color: white;
+}
+
+.album{
+    text-align:center;
+    display: block;
+    width: 327px;
+    max-width: 327px;
+    margin-right: 5x;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.exi{
+    margin-left: -15px;
+    font-size: 25px;
+}
+
+.opciones{
+    font-size: 20px;
+}
+
+.cabeza li:nth-child(3){
+    margin-top: 25px;
+}
+
+#caratula img{
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 23px;
+    box-shadow: 2px 2px 10px #666;
+}
+
+#cancion {
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+#cancion a {
+    text-decoration: none;
+    color: white;
+}
+
+#nombre{
+    width: 300px;
+    margin-left: 26px;
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

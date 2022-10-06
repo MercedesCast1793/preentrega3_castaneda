@@ -1,0 +1,21 @@
+@import "./utils/variables";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/navigation";
+
+@import "./components/buttons";
+@import "./components/card";
+
+@import "./pages/registro";
+@import "./pages/blog";
+@import "./pages/devocional";
+@import "./pages/index";
+@import "./pages/musica_para_el_alma";
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";

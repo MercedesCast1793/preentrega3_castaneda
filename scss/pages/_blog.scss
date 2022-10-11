@@ -1,7 +1,5 @@
 .card_blog{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(center,center);
     background-color: white;
     padding: 50px 20px 10px 10px;  
 }
